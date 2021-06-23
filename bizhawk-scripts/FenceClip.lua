@@ -127,7 +127,7 @@ function calculateTextPosition(i)
 end
 
 function round(n)
-    local result = math.floor(n + 0.5)
+    local result = n + (2^52 + 2^51) - (2^52 + 2^51)
     if result >= 256 then
         return math.floor(n)
     end
