@@ -1,3 +1,7 @@
+-- This script will tell you which item you would been selected on the current frame had you pressed Z to select the item on the previous frame.
+-- It has to be done this way, as the RNG function is called over 100 times per frame and you don't know how many times it would be called before your selection is handled, which means you wouldn't know what value to input to the RNG function.
+-- By capturing the RNG value at the point it would have calculated the item RNG (had you selected it), you can know what item you would have got on the current frame.
+
 local RNG_ADDR = 0x2BA290
 local BUTTON_COUNTER_ADDR = 0x1658FF
 local FRAME_COUNTER_ADDR = 0x18D3FC
